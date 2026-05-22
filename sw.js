@@ -1,40 +1,14 @@
-const CACHE_NAME = 'snake-v1.4';
-const ASSETS = [
-  'index.html',
-    'manifest.json',
-      'sw.js'
-      ];
+self.addEventListener('install', (event) => {
+    self.skipWaiting();
+    });
 
-      // Установка приложения и кэширование файлов
-      self.addEventListener('install', (event) => {
-        event.waitUntil(
-            caches.open(CACHE_NAME).then((cache) => {
-                  return cache.addAll(ASSETS);
-                      })
-                        );
-                        });
+    self.addEventListener('activate', (event) => {
+      event.waitUntil(clients.claim());
+      });
 
-                        // Активация и очистка старого кэша
-                        self.addEventListener('activate', (event) => {
-                          event.waitUntil(
-                              caches.keys().then((keys) => {
-                                    return Promise.all(
-                                            keys.map((key) => {
-                                                      if (key !== CACHE_NAME) {
-                                                                  return caches.delete(key);
-                                                                            }
-                                                                                    })
-                                                                                          );
-                                                                                              })
-                                                                                                );
-                                                                                                });
-
-                                                                                                // Запрос файлов из кэша для работы в офлайне
-                                                                                                self.addEventListener('fetch', (event) => {
-                                                                                                  event.respondWith(
-                                                                                                      caches.match(event.request).then((cachedResponse) => {
-                                                                                                            return cachedResponse || fetch(event.request);
-                                                                                                                })
-                                                                                                                  );
-                                                                                                                  });
-                                                                                                                  
+      self.addEventListener('fetch', (event) => {
+        // Просто пропускает запросы, но формально активирует PWA
+          event.respondWith(fetch(event.request));
+          });
+          
+})
