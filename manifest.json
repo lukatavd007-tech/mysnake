@@ -1,6 +1,6 @@
 {
-    "name": "Snake Game v1.4",
-      "short_name": "Snake 1.4",
+    "name": "Snake Game",
+      "short_name": "Snake",
         "start_url": "index.html",
           "display": "standalone",
             "background_color": "#000000",
@@ -8,15 +8,10 @@
                 "icons": [
                     {
                           "src": "icon.png",
-                                "sizes": "192x192",
+                                "sizes": "512x512",
                                       "type": "image/png"
-                                          },
-                                              {
-                                                    "src": "icon.png",
-                                                          "sizes": "512x512",
-                                                                "type": "image/png"
-                                                                    }
-                                                                      ]
-                                                                      }
-                                                                      
+                                          }
+                                            ]
+                                            }
+                                            
 }
