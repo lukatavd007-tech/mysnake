@@ -1,14 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.github.lukatavd007.mysnake" version="1.4.0" xmlns="http://www.w3.org/ns/widgets">
     <name>Snake Game v1.4</name>
-    <description>Моя игра Змейка!</description>
-    <author>lukatavd007-tech</author>
-    
-    <content src="index.html" />
-    
-    <preference name="Orientation" value="portrait" />
-    <preference name="Fullscreen" value="true" />
-    <preference name="BackgroundColor" value="0xff121212" />
-    
-    <icon src="icon.png" />
-</widget>
+        <description>Моя игра Змейка!</description>
+            <author>lukatavd007-tech</author>
+                
+                    <content src="index.html" />
+                        
+                            <preference name="Orientation" value="portrait" />
+                                <preference name="Fullscreen" value="true" />
+                                    <preference name="BackgroundColor" value="#121212" />
+                                        
+                                            <icon src="icon.png" />
+                                            </widget>
+                                            
